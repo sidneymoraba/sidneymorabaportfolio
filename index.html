@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sidney Moraba | IT Graduate Portfolio</title>
+<meta name="description" content="Sidney Moraba: Diploma in Information Technology (Multimedia) graduate looking for internships, learnerships and work-integrated learning in software development.">
+<link rel="icon" href="images/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b1420;--panel:#101c2c;--line:#1d2d44;--text:#d6e2ef;--muted:#8aa0b8;--cyan:#22d3ee;--blue:#4f6fe0;
+--grad:linear-gradient(135deg,#22d3ee,#4f6fe0);--head:"Oswald","Arial Narrow",Arial,sans-serif;--body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{background:var(--ink);color:var(--text);font-family:var(--body);line-height:1.65;font-size:17px;padding-bottom:96px}
+a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:980px;margin:0 auto}
+.top img{height:44px;display:block}
+.top a.pill{font-size:.95rem;border:1px solid var(--line);padding:7px 16px;border-radius:99px;color:var(--text)}
+.top a.pill:hover{border-color:var(--cyan);text-decoration:none}
+
+.hero{padding:36px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
+.hi{font-size:1.3rem;color:var(--muted)}
+h1{margin-top:6px;font-family:var(--head);font-weight:300;font-size:clamp(2.6rem,7vw,4.8rem);line-height:1.05;letter-spacing:.06em;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sub{margin-top:18px;color:var(--muted);max-width:50ch}
+.actions{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:11px 24px;border-radius:99px;border:1.5px solid var(--cyan);color:var(--cyan);font-weight:500}
+.btn:hover{text-decoration:none;background:rgba(34,211,238,.1)}
+.btn.solid{background:var(--grad);border-color:transparent;color:var(--ink)}
+.btn.solid:hover{filter:brightness(1.1);background:var(--grad)}
+.ring{padding:4px;border-radius:36px;background:var(--grad);max-width:340px;justify-self:center;width:100%}
+.ring img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:32px}
+
+.ask{margin-top:34px;max-width:560px}
+.ask p.q{color:var(--muted);font-size:.95rem;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:inherit;font-size:.92rem;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:99px;padding:8px 16px;cursor:pointer}
+.chips button:hover,.chips button[aria-pressed="true"]{border-color:var(--cyan);color:var(--cyan)}
+#answer{margin-top:12px;min-height:3.4em;padding:14px 18px;background:var(--panel);border-left:3px solid var(--cyan);border-radius:0 12px 12px 0}
+
+section{padding:60px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--head);font-weight:400;font-size:2rem;letter-spacing:.04em;margin-bottom:28px}
+h2::after{content:"";display:block;width:52px;height:3px;background:var(--grad);margin-top:10px}
+.me p{max-width:66ch}.me p+p{margin-top:14px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px}
+.card h3{font-family:var(--head);font-weight:400;font-size:1.4rem;letter-spacing:.02em}
+.card p{margin-top:8px;font-size:.97rem}
+.card .stack{color:var(--muted);font-size:.9rem;margin-top:12px}
+.card .link{display:inline-block;margin-top:12px;font-weight:500}
+
+.rows{display:grid}
+.row{display:grid;grid-template-columns:190px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)}
+.row:first-child{border-top:1px solid var(--line)}
+.row dt{font-family:var(--head);font-size:1.1rem;letter-spacing:.03em;color:var(--cyan)}
+.meta{color:var(--muted)}
+.contact ul{list-style:none;display:grid;gap:12px}
+.contact li{display:grid;grid-template-columns:110px 1fr;gap:16px}
+.contact li span{font-family:var(--head);letter-spacing:.04em;color:var(--muted)}
+footer{padding:26px 0;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+.dock{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:9;display:flex;gap:4px;padding:6px;background:rgba(16,28,44,.94);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:99px;max-width:calc(100% - 24px)}
+.dock a{color:var(--text);font-size:.95rem;padding:9px 16px;border-radius:99px;white-space:nowrap}
+.dock a:hover{background:var(--grad);color:var(--ink);text-decoration:none}
+
+@media(max-width:760px){
+ .hero .wrap{grid-template-columns:1fr;gap:34px}
+ .ring{order:-1;justify-self:start;max-width:230px}
+ .row{grid-template-columns:1fr;gap:2px}
+ .contact li{grid-template-columns:1fr;gap:0}
+ .dock a{padding:9px 11px;font-size:.88rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <a href="#top" aria-label="Sidney Moraba, home"><img src="images/logo.png" alt="Sidney Moraba"></a>
+  <a class="pill" href="Sidney-Moraba-CV.pdf" download>Download CV</a>
+</div>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="hi">Hey, I’m Sidney 👋</p>
+        <h1>IT Graduate &amp; Developer</h1>
+        <p class="sub">Diploma in Information Technology (Multimedia) from Tshwane University of Technology. I’m looking for an internship, learnership or work-integrated learning placement.</p>
+        <div class="actions">
+          <a class="btn solid" href="#contact">Get in touch</a>
+          <a class="btn" href="#projects">See my projects</a>
+        </div>
+        <div class="ask">
+          <p class="q">Quick questions about me</p>
+          <div class="chips" role="group" aria-label="Quick questions">
+            <button type="button" data-a="I finished a Diploma in Information Technology (Multimedia) at Tshwane University of Technology. I studied from 2017 to 2020.">What did you study?</button>
+            <button type="button" data-a="Websites with a backend and database, a 3D game in Unity, and video and motion graphics. My final-year project was a coffee shop site that takes orders and payments.">What can you build?</button>
+            <button type="button" data-a="Yes. I hold an EC driver’s licence and a valid PDP for goods and passengers, and I have my own transport.">Will you relocate?</button>
+            <button type="button" data-a="Sepedi, English, isiZulu and Tswana.">Which languages do you speak?</button>
+          </div>
+          <div id="answer" aria-live="polite">Tap a question to see my answer.</div>
+        </div>
+      </div>
+      <div class="ring"><img src="images/sidney.jpg" alt="Portrait of Sidney Moraba in a suit and tie" width="340" height="340"></div>
+    </div>
+  </div>
+
+  <section id="me" class="me">
+    <div class="wrap">
+      <h2>Me</h2>
+      <p>I’m a recent Information Technology graduate with a multimedia focus. I enjoy backend work most: writing SQL, building with PHP, Java and JavaScript, and connecting a website to its database so it does something useful.</p>
+      <p>I also design and edit. I’ve built a 3D game in Unity and Blender and edited video and sound in Adobe Premiere Pro and After Effects, so I can make things that work and look right.</p>
+      <p>I’m ready to learn inside a real team, take feedback well, and turn my diploma into workplace experience.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Coffee shop website</h3>
+          <p>My final-year project: a coffee shop site where customers place orders and pay online, backed by a database.</p>
+          <p class="stack">HTML, CSS, JavaScript, PHP, Java, Python, SQL</p>
+        </article>
+        <article class="card">
+          <h3>3D car parking management game</h3>
+          <p>A 3D game about managing a parking lot. I modelled the assets in Blender, built it in Unity, and made the sound and video in Adobe After Effects and Premiere Pro.</p>
+          <p class="stack">Unity, Blender, After Effects, Premiere Pro</p>
+        </article>
+        <article class="card">
+          <h3>Magopa Circuit website</h3>
+          <p>A live website for a church community, designed in blue and white and hosted for free.</p>
+          <p class="stack">HTML, CSS, JavaScript</p>
+          <a class="link" href="https://magopacircuit.netlify.app/">Visit the live site</a>
+        </article>
+      </div>
+      <p class="meta" style="margin-top:22px">More code is on <a href="https://github.com/marumobanda">my GitHub</a>.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <dl class="rows">
+        <div class="row"><dt>Programming</dt><dd>Java, JavaScript, PHP, Python, C++, C#</dd></div>
+        <div class="row"><dt>Databases</dt><dd>SQL, database development and management</dd></div>
+        <div class="row"><dt>Web</dt><dd>HTML, CSS, website development, backend development, database integration</dd></div>
+        <div class="row"><dt>Games and 3D</dt><dd>Unity game development, Blender 3D modelling</dd></div>
+        <div class="row"><dt>Video and design</dt><dd>Adobe Premiere Pro, Adobe After Effects, graphic design, animation, visual communication</dd></div>
+        <div class="row"><dt>IT support</dt><dd>Troubleshooting, software installation, basic networking, computer maintenance</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <dl class="rows">
+        <div class="row"><dt>2017 to 2020</dt><dd>Diploma in Information Technology (Multimedia)<br><span class="meta">Tshwane University of Technology</span></dd></div>
+        <div class="row"><dt>Certificates</dt><dd>Law enforcement certificate (pointsman), First Aid training</dd></div>
+        <div class="row"><dt>Languages</dt><dd>Sepedi, English, isiZulu, Tswana</dd></div>
+        <div class="row"><dt>Driving</dt><dd>EC licence and valid PDP (goods and passengers), own transport, willing to relocate</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <ul>
+        <li><span>Email</span><a href="mailto:marumobanda01@gmail.com">marumobanda01@gmail.com</a></li>
+        <li><span>Phone</span><a href="tel:+27781669541">078 166 9541</a></li>
+        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/sidney-moraba-908214388/">linkedin.com/in/sidney-moraba</a></li>
+        <li><span>GitHub</span><a href="https://github.com/marumobanda">github.com/marumobanda</a></li>
+        <li><span>Location</span>Gauteng, South Africa</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Sidney Moraba</span><span>References available on request</span></div></footer>
+
+<nav class="dock" aria-label="Sections">
+  <a href="#me">Me</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</nav>
+
+<script>
+(function(){
+  var out=document.getElementById("answer"),btns=document.querySelectorAll(".chips button");
+  btns.forEach(function(b){b.addEventListener("click",function(){
+    btns.forEach(function(x){x.setAttribute("aria-pressed","false")});
+    b.setAttribute("aria-pressed","true");out.textContent=b.getAttribute("data-a");
+  })});
+})();
+</script>
+</body>
+</html>
